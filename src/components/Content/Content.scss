@@ -1,0 +1,380 @@
+//  CONTENT.SCSS //
+
+@use "../../styles/partials/variables" as *;
+
+
+@mixin content-desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        .content-card {
+            width: 100%;
+            padding: 0 64px;
+            margin-bottom: 24px;
+
+            display: flex;
+
+            &__aside {
+                margin: 0;
+            }
+
+            &__aside:nth-of-type(1) {
+                width: 70%;
+                border-right: 1px solid $colorsilver;
+            }
+
+            &__aside:nth-of-type(2) {
+                width: 30%;
+            }
+
+            &__placeholder {
+                margin: auto;
+                border-bottom: 1px solid $colorsilver;
+            }
+
+            &__section {
+                padding: 0 24px 24px 0;
+                border-bottom: 1px solid $colorsilver;
+            }
+
+            &__subsection {
+                width: 100%;
+                margin: 0;
+            }
+
+            &__title {
+                margin: 0;
+            }
+
+            &__subtitle {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &__label {
+                width: 50%;
+            }
+
+            &__label:nth-of-type(2) {
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            &__writeup {
+                width: 100%;
+                margin: 0;
+                padding-bottom: 24px;
+            }
+
+            &__form {
+                width: 100%;
+                margin: 0;
+
+                display: flex;
+                align-items: flex-end;
+            }
+
+            &__list {
+                width: 100%;
+                margin: 0;
+                padding-top: 14px;
+                
+                display: flex;
+                
+            }
+
+            &__row--label {
+                width: 10%;
+                min-width: 50px;
+                margin: 0;
+            }
+
+            &__row--input {
+                width: 90%;
+                margin: 0;
+                padding: 14px 0;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+        }
+
+        .lblAbove {
+            width: 100%;
+        }
+
+
+        textarea.inpComment {
+            font-family: "AvenirNext", Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            width: 75%;
+            height: 40px;
+            padding: 10px;
+            resize: none;
+        }
+
+
+        button.btnComment {
+            width: 20%;
+            background-image: url("../../assets/images/icons/add_comment.svg");
+            background-repeat:no-repeat;
+            background-position-x: 12px;
+            background-position-y: 12px;
+            background-size: 14px;
+        
+            padding: 4px 32px;
+        
+            transition: background-color 0.5s;
+        }
+        
+    }
+}
+
+
+
+@mixin content-tablet {
+    @media screen and (max-width: $desktop-breakpoint) and
+    (min-width: $tablet-breakpoint) {
+        .content-card {
+            width: 100%;
+            padding: 0 32px;
+            margin-bottom: 24px;
+
+            &__aside {
+                margin: 0;
+                width: 100%;
+            }
+
+            &__aside:nth-of-type(1) {
+                border-bottom: 1px solid $colorsilver;
+            }
+
+            &__aside:nth-of-type(2) {
+                padding-top: 24px;
+            }
+
+            &__placeholder {
+                margin: auto;
+                border-bottom: 1px solid $colorsilver;
+            }
+
+            &__section {
+                padding: 0 24px 24px 0;
+                border-bottom: 1px solid $colorsilver;
+            }
+
+            &__subsection {
+                width: 100%;
+                margin: 0;
+            }
+
+            &__title {
+                margin: 0;
+            }
+
+            &__subtitle {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &__label {
+                width: 50%;
+            }
+
+            &__label:nth-of-type(2) {
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            &__writeup {
+                width: 100%;
+                margin: 0;
+                padding-bottom: 24px;
+            }
+
+            &__form {
+                width: 100%;
+                margin: 0;
+
+                display: flex;
+                align-items: flex-end;
+            }
+
+            &__list {
+                width: 100%;
+                margin: 0;
+                padding-top: 14px;
+                
+                display: flex;
+                
+            }
+
+            &__row--label {
+                width: 10%;
+                min-width: 50px;
+                margin: 0;
+            }
+
+            &__row--input {
+                width: 90%;
+                margin: 0;
+                padding: 14px 0;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+        }
+
+        .lblAbove {
+            width: 100%;
+        }
+
+
+        textarea.inpComment {
+            font-family: "AvenirNext", Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            width: 75%;
+            height: 40px;
+            padding: 10px;
+            resize: none;
+        }
+
+        button.btnComment {
+            width: 20%;
+            background-image: url("../../assets/images/icons/add_comment.svg");
+            background-repeat:no-repeat;
+            background-position-x: 12px;
+            background-position-y: 12px;
+            background-size: 14px;
+        
+            padding: 4px 32px;
+        
+            transition: background-color 0.5s;
+        }
+    }
+}
+
+
+@mixin content-mobile {
+    @media screen and (max-width: $mobile-breakpoint) {
+        .content-card {
+            width: 100%;
+            padding: 0 24px;
+            margin-bottom: 24px;
+
+            &__aside {
+                margin: 0;
+                width: 100%;
+            }
+
+            &__placeholder {
+                margin: auto;
+                border-bottom: 1px solid $colorsilver;
+            }
+
+            &__section {
+                padding: 0 24px 24px 0;
+                border-bottom: 1px solid $colorsilver;
+            }
+
+            &__subsection {
+                width: 100%;
+                margin: 0;
+            }
+
+            &__title {
+                margin: 0;
+            }
+
+            &__subtitle {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &__label {
+                width: 50%;
+            }
+
+            &__label:nth-of-type(2) {
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            &__writeup {
+                width: 100%;
+                margin: 0;
+                padding-bottom: 24px;
+            }
+
+            &__form {
+                width: 100%;
+                margin: 0;
+
+                display: flex;
+                align-items: flex-end;
+            }
+
+            &__list {
+                width: 100%;
+                margin: 0;
+                padding-top: 14px;
+                
+                display: flex;
+                
+            }
+
+            &__row--label {
+                width: 10%;
+                min-width: 50px;
+                margin: 0;
+            }
+
+            &__row--input {
+                width: 90%;
+                margin: 0;
+                padding: 14px 0;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+        }
+
+        .lblAbove {
+            width: 100%;
+        }
+
+        textarea.inpComment {
+            font-family: "AvenirNext", Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            width: 75%;
+            min-width: 300px;
+            height: 80px;
+            padding: 10px;
+            resize: none;
+        }
+
+        button.btnComment {
+            width: 100%;
+            background-image: url("../../assets/images/icons/add_comment.svg");
+            background-repeat:no-repeat;
+            background-position-x: 12px;
+            background-position-y: 12px;
+            background-size: 14px;
+        
+            padding: 4px 32px;
+        
+            transition: background-color 0.5s;
+        }
+      
+    }
+}

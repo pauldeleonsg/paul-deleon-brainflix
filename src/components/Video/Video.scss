@@ -1,0 +1,101 @@
+//  VIDEOS.SCSS //
+
+@use "../../styles/partials/variables" as *;
+
+
+@mixin video-desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        .video-card {
+            width: 100%;
+            //background-color: $colordrkblack;
+            background-image: linear-gradient(to bottom, $colordrkblack, $colorblack);
+            //opacity: 0.05;
+            margin: auto;
+            //margin-bottom: 24px;
+            padding: 0 64px;            
+            
+            &__aside {
+                margin: auto;
+                max-width: 800px;
+                min-height: 450px;
+                background-image: url("../../assets/images/logo/logo-brainflix-bw.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                
+            }
+        }
+        
+        img.vidCover {
+            width: 800px;
+            height: 450px;
+        }
+
+    }
+}
+
+
+
+@mixin video-tablet {
+    @media screen and (max-width: $desktop-breakpoint) and
+    (min-width: $tablet-breakpoint) {
+        .video-card {
+            width: 100%;
+            //background-color: $colordrkblack;
+            background-image: linear-gradient(to bottom, $colordrkblack, $colorblack);
+            margin: auto;
+            margin-bottom: 24px;
+            padding: 0 32px 24px 64px;
+            
+            &__aside {
+                margin: auto;
+                max-width: 640px;
+                min-height: 360px;
+                background-image: url("../../assets/images/logo/logo-brainflix-bw.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0.05;
+
+                //border: 1px solid $colorblack;
+            }
+        }
+
+        img.vidCover {
+            width: 800px;
+            height: 450px;
+        }
+    }
+}
+
+
+@mixin video-mobile {
+    @media screen and (max-width: $mobile-breakpoint) {
+        .video-card {
+            width: 100%;
+            //background-color: $colordrkblack;
+            background-image: linear-gradient(to bottom, $colordrkblack, $colorblack);
+            margin: auto;
+            margin-bottom: 16px;
+            padding: 0 16px 16px 16px;
+            
+            &__aside {
+                margin: auto;
+                max-width: 360px;
+                min-height: 203px;
+                background-image: url("../../assets/images/logo/logo-brainflix-bw.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 320px;
+                opacity: 0.05;
+
+                //border: 1px solid $colorblack;
+            }
+        }
+
+        img.vidCover {
+            width: 100%;
+            min-width: 375px;
+            min-height: 211px;
+        }
+      
+    }
+}

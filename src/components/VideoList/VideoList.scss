@@ -1,0 +1,124 @@
+// VIDEOLIST.SCSS //
+
+@use "../../styles/partials/variables" as *;
+
+
+@mixin videolist-desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        .videolist-card {
+            width: 100%;
+            padding-top: 24px;
+            padding-left: 24px;
+
+            &__title {
+                width: 100%;
+                padding-bottom: 14px;
+            }
+
+            &__item {
+                width: 100%;
+                padding-bottom: 32px;
+                display: flex;
+            }
+
+            &__item:hover {
+                cursor: pointer;
+            }
+
+
+            &__row--label {
+                width: 30%;
+                max-width: 110px;
+            }
+
+            &__row--input {
+                width: 70%;
+                max-height: 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }    
+    }
+}
+
+
+
+@mixin videolist-tablet {
+    @media screen and (max-width: $desktop-breakpoint) and
+    (min-width: $tablet-breakpoint) {
+        .videolist-card {
+            width: 100%;
+            padding-top: 24px;
+            
+            &__title {
+                width: 100%;
+                padding-bottom: 14px;
+            }
+
+            &__item {
+                width: 100%;
+                padding-bottom: 32px;
+                display: flex;
+            }
+
+            &__item:hover {
+                cursor: pointer;
+            }
+
+
+            &__row--label {
+                width: 30%;
+                max-width: 110px;
+            }
+
+            &__row--input {
+                width: 70%;
+                max-height: 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }   
+    }
+}
+
+
+@mixin videolist-mobile {
+    @media screen and (max-width: $mobile-breakpoint) {
+        .videolist-card {
+            width: 100%;
+            min-width: 375px;
+            padding-top: 24px;
+            
+            &__title {
+                width: 100%;
+                padding-bottom: 14px;
+            }
+
+            &__item {
+                width: 100%;
+                padding-bottom: 32px;
+                display: flex;
+            }
+
+            &__item:hover {
+                cursor: pointer;
+            }
+
+            &__row--label {
+                width: 30%;
+                max-width: 110px;
+            }
+
+            &__row--input {
+                width: 70%;
+                max-height: 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }   
+      
+    }
+}

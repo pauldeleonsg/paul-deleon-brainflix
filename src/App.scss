@@ -1,0 +1,209 @@
+/* APP.SCSS */
+
+// import scss files
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/fonts" as *;
+
+@use "./components/Header/Header.scss" as *;
+@use "./components/Video/Video.scss" as *;
+@use "./components/Content/Content.scss" as *;
+@use "./components/Feature/Feature.scss" as *;
+@use "./components/ConvForm/ConvForm.scss" as *;
+@use "./components/VideoList/VideoList.scss" as *;
+
+
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: "AvenirNext", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: $colorblack;
+  
+  background-color: $colorbga;
+}
+
+
+.body-card {
+  width: 100%;
+  margin: 0;
+}
+
+.avatarName {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $colorsilver;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $colorwhite;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.convForm {
+  margin: 0;
+}
+
+
+//forms
+input[type=text] {
+  font-family: "AvenirNext";
+  font-size: 14px;
+  min-width: 240px;
+  height: 40px;
+  border: 1px solid $colormercury;
+  border-radius: 4px;
+  padding: 4px;
+
+}
+
+
+button {
+  //width: 100%;
+  min-width: 150px;
+  height: 40px;
+  background-color: $colorblue;
+  
+  color: $colorwhite;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+
+  border-radius: 4px;
+  border: 0px;
+
+  transition: background-color 0.5s;
+}
+
+
+button:hover {
+  background-color: $colordrkblue;
+  transition: background-color 0.5s;
+}
+
+
+
+// images
+img.logo {
+  width: 120px;
+  height: 25px;
+}
+
+img.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $colorsilver;
+}
+
+img.imgThumb {
+  width: 100px;
+  height: 60px;
+  background-color: $colormercury;
+  border: 0px;
+  border-radius: 4px;
+  
+}
+
+//spans
+.lblDark {
+  font-size: 14px;
+  color: $colorblack;
+  font-weight: bold;
+}
+
+.lblLight {
+  font-size: 12px;
+  color: $colorsilver;
+  text-transform: uppercase;
+}
+
+.lblNormal {
+  font-size: 14px;
+  color: $colorblack;
+}
+
+.lblName {
+  padding-right: 12px;
+}
+
+.lblView {
+  padding: 0 16px;
+  background-image: url("./assets/images/icons/views.svg");
+  background-repeat:no-repeat;
+  background-position-x: 2px;
+  background-position-y: 2px;
+  background-size: 12px;
+}
+
+.lblLike {
+  padding: 0 16px;
+  background-image: url("./assets/images/icons/likes.svg");
+  background-repeat:no-repeat;
+  background-position-x: 2px;
+  background-position-y: 2px;
+  background-size: 12px;
+}
+
+.itemUp {
+  align-items: flex-start;
+}
+
+.itemDown {
+  align-items: flex-end;
+}
+
+
+//etc
+hr {
+  border: 1px solid $colorsilver;
+}
+
+
+/* INCLUDES */
+// fonts
+@include fonts-desktop;
+@include fonts-mobile;
+
+
+
+// header
+@include header-desktop;
+@include header-tablet;
+@include header-mobile;
+
+
+// video
+@include video-desktop;
+@include video-tablet;
+@include video-mobile;
+
+
+// content
+@include content-desktop;
+@include content-tablet;
+@include content-mobile;
+
+
+// feature
+@include feature-desktop;
+@include feature-tablet;
+@include feature-mobile;
+
+
+// convform
+@include convform-desktop;
+@include convform-tablet;
+@include convform-mobile;
+
+
+// videolist
+@include videolist-desktop;
+@include videolist-tablet;
+@include videolist-mobile;

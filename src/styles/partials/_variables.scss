@@ -1,0 +1,41 @@
+/* _VARIABLES.SCSS */
+
+@use "sass:map";
+
+//color set
+$bfcolors : (
+  "bfpri01" : #323232,    //black
+  "bfpri02" : #0095ff,    //blue
+  "bfpri03" : #afafaf,    //silver
+  "bfpri04" : #ffffff,    //white
+  "bfsec01" : #000000,    //dark black
+  "bfsec02" : #0065ad,    //dark blue
+  "bfsec03" : #e1e1e1,    //mercury
+  "bfsec04" : #fafafa,    //alabaster
+);
+
+
+//color assignment
+$colorblack : map.get($bfcolors, "bfpri01");
+$colorblue : map.get($bfcolors, "bfpri02");
+$colorsilver : map.get($bfcolors, "bfpri03");
+$colorwhite : map.get($bfcolors, "bfpri04");
+
+$colordrkblack : map.get($bfcolors, "bfsec01");
+$colordrkblue : map.get($bfcolors, "bfsec02");
+$colormercury : map.get($bfcolors, "bfsec03");
+$coloralabaster : map.get($bfcolors, "bfsec04");
+
+//lines
+$colorlinea : map.get($bfcolors, "bfpri01");
+
+//backgrounds
+$colorbga : map.get($bfcolors, "bfpri04");
+
+
+
+//breakpoints
+$desktop-maxpoint: 1600px;      //max desktop
+$desktop-breakpoint: 1024px;
+$tablet-breakpoint: 768px;
+$mobile-breakpoint: 767px;      //max

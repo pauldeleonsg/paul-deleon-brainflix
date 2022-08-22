@@ -1,0 +1,89 @@
+/* _FONTS.SCSS */
+
+@use "./variables" as *;
+
+@font-face {
+    font-family: "AvenirNext";
+    font-weight: normal;
+    src: url("../../assets/fonts/AvenirNextLTPro.ttf");
+    src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+}
+
+
+@font-face {
+    font-family: "AvenirNext";
+    font-weight: bold;
+    src: url("../../assets/fonts/AvenirNextLTProBold.ttf");
+    src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+}
+  
+
+
+@mixin fonts-desktop {
+    @media screen and (min-width: $tablet-breakpoint) {
+        h1 {
+            font-family: "AvenirNext";
+            font-size: 33px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-family: "AvenirNext";
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-family: "AvenirNext";
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 22px;
+        }
+
+        .font-label, .font-button {
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+    }
+}
+
+
+@mixin fonts-mobile {
+    @media screen and (max-width: $mobile-breakpoint) {
+        h1 {
+            font-family: "AvenirNext";
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-family: "AvenirNext";
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-family: "AvenirNext";
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 13px;
+            font-weight: normal;
+            line-height: 22px;
+        }
+
+        .font-label, .font-button {
+            font-size: 12px;
+            font-weight: 700;
+        }
+      
+    }
+}
