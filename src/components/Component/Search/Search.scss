@@ -1,0 +1,76 @@
+// SEARCH.SCSS //
+
+@use '../../../Styles/Partials/variables' as *;
+
+
+.div-search {
+    margin: 0;
+    margin: 16px 16px;
+
+    &__card {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin: 0;
+        width: 50%;
+    }
+
+    &__box {
+        width: 80%;
+        margin: auto;
+        border: 1px solid $colorsilver;
+        border-radius: 4px;
+    }
+
+    &__box--item {
+        padding: 32px;
+    }
+}
+
+
+.lblSearchContent {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin search-desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        .div-search {
+            margin: 16px 64px;
+
+            &__title {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+
+
+
+@mixin search-tablet {
+    @media screen and (max-width: $desktop-breakpoint) and
+    (min-width: $tablet-breakpoint) {
+        
+    }
+}
+
+
+@mixin search-mobile {
+    @media screen and (max-width: $mobile-breakpoint) {
+        
+      
+    }
+}
+
+
+@include search-desktop;
+@include search-tablet;
+@include search-mobile;

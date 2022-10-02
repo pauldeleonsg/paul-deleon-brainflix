@@ -1,0 +1,85 @@
+// VIDEOMAIN.SCSS //
+@use '../../../Styles/Partials/variables' as *;
+
+.div-videomain {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $colorsilver;
+    margin-bottom: 16px;
+    
+    &__title {
+        width: 100%;
+    }
+
+    &__card {
+        padding-right: 16px;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    &__subtitle {
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+
+    }
+
+    &__subtitle-item {
+        margin: 0;
+        display: flex;
+        align-items: baseline;
+    }
+
+    
+
+    &__item {
+        margin: 0;
+    }
+}
+
+
+
+
+@mixin videomain-desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        .div-videomain {
+            padding-right: 16px;
+
+            &__subtitle-item {
+                width: 50%;
+            }
+
+            &__subtitle-item:nth-of-type(2) {
+                justify-content: end;
+            }
+
+        }   
+
+    }
+}
+
+
+
+@mixin videomain-tablet {
+    @media screen and (max-width: $desktop-breakpoint) and
+    (min-width: $tablet-breakpoint) {
+        
+
+    }
+}
+
+
+@mixin videomain-mobile {
+    @media screen and (max-width: $mobile-breakpoint) {
+        
+
+    }
+}
+
+
+
+// INCLUDES //
+@include videomain-desktop;
+@include videomain-tablet;
+@include videomain-mobile;

@@ -1,30 +1,44 @@
+import React, { useContext, useEffect } from 'react';
+import { MainContext } from './Context/Context';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
 import './App.scss';
-import React from 'react';
+import Etal from './Components/Component/Etal/Etal';
+import Video from './Components/Component/Video/Video';
+import Header from './Components/Component/Header/Header';
+import Account from './Components/Component/Account/Account';
+import Search from './Components/Component/Search/Search';
 
-import Header from './components/Header/Header';
-import Video from './components/Video/Video';
+const App = () => {
+    const context = useContext(MainContext);
+
+    useEffect(() => {
+        context.fxnSetWeb();
+        context.fxnFetcher();
+    }, [])
 
 
-function App() {
-    const apikey = '9999';      //hardcode apikey
-  
-  return (
-    <div className="body-card">
-        <Header apikey={apikey} />    
-        
-        <Video apikey={apikey} />
-        
-    </div>
-  );
+    return (
+        <>
+        <BrowserRouter>
+            <div className='div-body'>
+            <Header />
+
+            <Routes>
+                <Route path="/" element={<Video />} />
+                <Route path="/account" element={<Account />} />
+                <Route path="/search" element={<Search />} />
+            </Routes>
+
+            {/* <FormSamp /> */}
+            
+            <Etal />
+            </div>
+      
+        </BrowserRouter>
+        </>
+    );
 }
 
 export default App;
-
-
-
-
-
-
-
-//notes:
-//https://reactjsexample.com/full-stack-youtube-clone-for-uploading-and-viewing-pet-videos/

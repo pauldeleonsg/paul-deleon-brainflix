@@ -1,0 +1,21 @@
+// SEARCHTHUMB.SCSS //
+
+.div-searchthumb {
+    width: 200px;
+    margin: 10px;
+
+
+    &__card {
+        margin: 0;
+        //display: flex;
+    }
+
+    &__item {
+        margin: 0;
+    }
+
+    ul.search {
+        padding-left: 0;
+        list-style: none;
+    }
+}

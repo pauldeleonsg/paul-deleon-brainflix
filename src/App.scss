@@ -1,15 +1,15 @@
 /* APP.SCSS */
 
 // import scss files
-@use "./styles/partials/variables" as *;
-@use "./styles/partials/fonts" as *;
+@use "./Styles/Partials/variables" as *;
+@use "./Styles/Partials/fonts" as *;
 
-@use "./components/Header/Header.scss" as *;
-@use "./components/Video/Video.scss" as *;
-@use "./components/Content/Content.scss" as *;
-@use "./components/Feature/Feature.scss" as *;
-@use "./components/ConvForm/ConvForm.scss" as *;
-@use "./components/VideoList/VideoList.scss" as *;
+// @use "./components/Header/Header.scss" as *;
+// @use "./components/Video/Video.scss" as *;
+// @use "./components/Content/Content.scss" as *;
+// @use "./components/Feature/Feature.scss" as *;
+// @use "./components/ConvForm/ConvForm.scss" as *;
+// @use "./components/VideoList/VideoList.scss" as *;
 
 
 /* GLOBAL */
@@ -28,7 +28,7 @@ body {
 }
 
 
-.body-card {
+.div-body {
   width: 100%;
   margin: 0;
 }
@@ -96,68 +96,149 @@ img.logo {
 }
 
 img.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: $colorsilver;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $colorsilver;
+    border-radius: 50%;
+    background-color: $colormercury;
+    background-image: linear-gradient(to bottom right, $colorsilver, $colormercury);
 }
 
 img.imgThumb {
-  width: 100px;
-  height: 60px;
-  background-color: $colormercury;
-  border: 0px;
-  border-radius: 4px;
+    width: 100px;
+    height: 60px;
+    background-color: $colormercury;
+    border: 0px;
+    border-radius: 4px;
   
 }
 
-//spans
+img.imgSearchThumb {
+    width: 200px;
+    height: 112px;
+    background-color: $colormercury;
+    border: 0px;
+    border-radius: 4px;
+}
+
+//FORM
+input[type=text].inpComment {
+    width: 75%;
+}
+
+button.btnComment {
+    width: 20%;
+    background-image: url("./Assets/images/icons/add_comment.svg");
+    background-repeat:no-repeat;
+    background-position-x: 12px;
+    background-position-y: 12px;
+    background-size: 14px;
+
+    padding: 4px 32px;
+
+    transition: background-color 0.5s;
+} 
+
+textarea.inpComment {
+    font-family: "AvenirNext", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    width: 75%;
+    height: 40px;
+    padding: 10px;
+    resize: none;
+    border-radius: 4px;
+}
+
+
+//SPANS
+.lblTitle {
+    font-size: 28px;
+    color: $colorblack;
+    font-weight: bold;
+}
+
 .lblDark {
-  font-size: 14px;
-  color: $colorblack;
-  font-weight: bold;
+    font-size: 14px;
+    color: $colorblack;
+    font-weight: bold;
 }
 
 .lblLight {
-  font-size: 12px;
-  color: $colorsilver;
-  text-transform: uppercase;
+    font-size: 12px;
+    color: $colorsilver;
+    text-transform: uppercase;
 }
 
 .lblNormal {
-  font-size: 14px;
-  color: $colorblack;
+    font-size: 14px;
+    color: $colorblack;
+}
+
+.lblBoxTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: $colorblack;
+}
+
+.lblError {
+    font-size: 12px;
+    color: red;
 }
 
 .lblName {
-  padding-right: 12px;
+    padding-right: 12px;
 }
 
 .lblView {
-  padding: 0 16px;
-  background-image: url("./assets/images/icons/views.svg");
-  background-repeat:no-repeat;
-  background-position-x: 2px;
-  background-position-y: 2px;
-  background-size: 12px;
+    padding: 0 20px;
+    background-image: url("./Assets/images/icons/views.svg");
+    background-repeat:no-repeat;
+    background-position-x: 2px;
+    background-position-y: 2px;
+    background-size: 12px;
 }
 
 .lblLike {
-  padding: 0 16px;
-  background-image: url("./assets/images/icons/likes.svg");
-  background-repeat:no-repeat;
-  background-position-x: 2px;
-  background-position-y: 2px;
-  background-size: 12px;
+    padding: 0 20px;
+    background-image: url("./Assets/images/icons/likes.svg");
+    background-repeat:no-repeat;
+    background-position-x: 2px;
+    background-position-y: 2px;
+    background-size: 12px;
+}
+
+.lblTemp {
+    color: #ffffff;
+    background-color: purple;;
+    font-style: italic;
 }
 
 .itemUp {
-  align-items: flex-start;
+    align-items: flex-start;
 }
 
 .itemDown {
-  align-items: flex-end;
+    align-items: flex-end;
 }
+
+.itemRight {
+    text-align: right;
+}
+
+.avatarName {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $colorsilver;
+    border-radius: 50%;
+    background-color: $colormercury;
+    background-image: linear-gradient(to bottom right, $colorsilver, $colormercury);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $colorwhite;
+    font-size: 24px;
+    font-weight: bold;
+  }
 
 
 //etc
@@ -173,37 +254,3 @@ hr {
 
 
 
-// header
-@include header-desktop;
-@include header-tablet;
-@include header-mobile;
-
-
-// video
-@include video-desktop;
-@include video-tablet;
-@include video-mobile;
-
-
-// content
-@include content-desktop;
-@include content-tablet;
-@include content-mobile;
-
-
-// feature
-@include feature-desktop;
-@include feature-tablet;
-@include feature-mobile;
-
-
-// convform
-@include convform-desktop;
-@include convform-tablet;
-@include convform-mobile;
-
-
-// videolist
-@include videolist-desktop;
-@include videolist-tablet;
-@include videolist-mobile;

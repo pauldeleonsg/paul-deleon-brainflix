@@ -1,0 +1,9 @@
+child to parent
+https://www.kindacode.com/article/passing-data-from-a-child-component-to-the-parent-in-react/
+
+map
+https://www.pluralsight.com/guides/how-to-use-the-map()-function-to-export-javascript-in-react
+
+
+fetch
+https://gomakethings.com/how-to-use-the-fetch-method-to-make-multiple-api-calls-with-vanilla-javascript/

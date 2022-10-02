@@ -1,0 +1,46 @@
+// VIDEOPLAYER.SCSS //
+
+@use '../../../Styles/Partials/variables' as *;
+
+video {
+    margin: 0;
+}
+
+.div-videoplayer {
+    display: flex;
+    justify-content: center;
+}
+
+
+@mixin videoplayer-desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        .div-videoplayer {
+            min-width: 800px;
+            min-height: 450px;
+        }
+    }
+}
+
+
+
+@mixin videoplayer-tablet {
+    @media screen and (max-width: $desktop-breakpoint) and
+    (min-width: $tablet-breakpoint) {
+        
+
+    }
+}
+
+
+@mixin videoplayer-mobile {
+    @media screen and (max-width: $mobile-breakpoint) {
+        
+
+    }
+}
+
+
+// INCLUDES //
+@include videoplayer-desktop;
+@include videoplayer-tablet;
+@include videoplayer-mobile;

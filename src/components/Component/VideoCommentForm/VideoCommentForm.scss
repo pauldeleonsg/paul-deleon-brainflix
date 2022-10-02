@@ -1,0 +1,43 @@
+// VIDEOCOMMENTFORM.SCSS //
+
+.div-videocommentform {
+    margin: 0;
+    width: 100%;
+    
+    &__card {
+        margin: 0;
+        margin-bottom: 16px;
+        display: flex;
+
+    }
+
+    &__row--label {
+        max-width: 90px;
+        padding-right: 8px;
+    }
+
+    &__row--input {
+        margin: 0;
+        width: 100%;
+    }
+
+    &__inlabel {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__incomment {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__bottom {
+        margin: 0;
+        display: flex;
+        justify-content: baseline;
+    }
+}
